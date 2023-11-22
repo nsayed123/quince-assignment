@@ -1,4 +1,4 @@
-# CLI interface to consume Geocoding API
+# Python script to find all open security groups in an AWS account.
 
 This repository contains the python script to find all open security groups in an AWS account.
 
