@@ -6,6 +6,7 @@ This repository contains the python script to find all open security groups in a
 
 To install and run these example you need:
 - Python 3.8+
+- pip3
 - git (only to clone this repository)
 - Following packages required
     - boto3
