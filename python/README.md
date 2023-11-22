@@ -1,4 +1,4 @@
-# Python script to find all open security groups in an AWS account.
+# Python script to find all open security groups in an AWS account
 
 This repository contains the python script to find all open security groups in an AWS account.
 
@@ -16,7 +16,7 @@ To install and run these example you need:
 The commands below set everything up to run the examples:
 ```
 $ git clone https://github.com/nsayed123/quince-assignment.git
-$ cd python
+$ cd quince-assignment/python
 ```
 
 Install the following packages
@@ -31,9 +31,9 @@ or
 
 ## Run
 
-Make sure you are in the right directory "signzy-geocoding-project"
+Make sure you are in the right directory "quince-assignment/python"
 ```
-python3 geocode.py <Excel sheet>
+python3 securitygroup.py
 
 Ex: python3 securitygroup.py
 ```
