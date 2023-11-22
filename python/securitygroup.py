@@ -1,39 +1,6 @@
 import boto3
 from botocore.exceptions import ClientError
 
-def _sgrule_add(sg):
-    ip_ranges = ['23.99.92.154/32', '3.108.0.29/32', "3.109.224.121/32","52.11.6.209/32", "54.245.40.87/32", "65.1.138.147/32", "65.1.192.116/32", "49.249.54.254/32", "115.117.125.178/32"]
-    print(sg)
-    sgid, FromPort, ToPort, IpProtocol = sg.split(':')
-    for ip_range in ip_ranges:
-        try:
-            print(f"Adding for {sgid} from {FromPort} to {ToPort} and {ip_range}")
-            response = client.authorize_security_group_ingress(
-                GroupId=sgid,
-                IpPermissions=[
-                    {
-                        'IpProtocol': 'tcp',
-                        'FromPort': int(FromPort),
-                        'ToPort': int(ToPort),
-                        'IpRanges': [
-                            {
-                                'CidrIp': ip_range,
-                                'Description': "Office IP and OpenVPN IPs"
-                            }
-                        ]
-                    }
-                ]
-            )
-            print('Rule added successfully.')
-        except ClientError as e:
-            if e.response['Error']['Code'] == 'InvalidPermission.Duplicate':
-                print('Rule already exists.')
-            else:
-                raise e
-
-    return
-
-
 def _security_group_list(vpc_id):
     sgs = client.describe_security_groups(Filters=[{'Name': 'vpc-id', 'Values': [vpc_id]}], MaxResults=1000)
     whitelist_sgid = []
@@ -63,7 +30,7 @@ def _security_group_list(vpc_id):
         print(whitelist_sgid_joined)
 
 
-#profile_name = ['tk-bang', 'tk-poc', 'tk-nonprod', 'tk-prod', 'tk-perf', 'tk-uat', 'tk-usa']
+
 profile_name = "poc"
 # region_name = ["ap-south-1", "eu-north-1", "eu-west-3", "eu-west-2", "eu-west-1", "ap-northeast-3", "ap-northeast-2", "ap-northeast-1", "ca-central-1", "sa-east-1", "ap-southeast-1", "ap-southeast-2", "eu-central-1", "us-east-1", "us-east-2", "us-west-1", "us-west-2"]
 region_name = [ "us-east-1" ]

@@ -28,6 +28,14 @@ or
 
 - pip3 install -r requirements.txt
 
+## Changes
+
+1. Create an aws credentails profile.
+```
+aws configure --profile <profilename>
+```
+2. Update the profile name in the script at line 34
+3. Update the region in the script at line 36, pass it has a list of regions
 
 ## Run
 
