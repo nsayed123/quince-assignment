@@ -6,6 +6,7 @@ This repository contains the multistage Dockerfile to build and run a sample jav
 
 To install and run this example you need:
 - docker client
+- git (only to clone this repository)
 
 
 ## Installation

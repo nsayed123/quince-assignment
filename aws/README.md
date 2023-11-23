@@ -7,6 +7,8 @@ This repository contains the setup AWS Cloudwatch Alarms from Logs using Terrafo
 To install and run this example you need:
 - Terraform
 - aws cli
+- git (only to clone this repository)
+
 
 
 ## Installation
