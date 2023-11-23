@@ -27,6 +27,7 @@ aws configure --profile <profilename>
 ```
 3. Update the profile name in the provider.tf.
 4. There is only SNS topic resource, subscription resource is not added we can add the Subscription resource block according to our required mode.
+5. Change the required values in terraform.tfvars
 
 
 ## Run
