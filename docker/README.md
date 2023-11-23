@@ -1,6 +1,6 @@
 # Multistage Dockerfile to build and run a sample java application
 
-This repository contains the multistage Dockerfile to build and run a sample java application..
+This repository contains the multistage Dockerfile to build and run a sample java application.
 
 ## Requirements
 
