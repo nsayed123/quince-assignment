@@ -26,6 +26,7 @@ $ cd quince-assignment/aws/cloudwatch_alaram
 aws configure --profile <profilename>
 ```
 3. Update the profile name in the provider.tf.
+4. There is only SNS topic resource, subscription resource is not added we can add the Subscription resource block according to our required mode.
 
 
 ## Run
